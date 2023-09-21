@@ -64,8 +64,8 @@ function cloneTC() {
         PATH="${KERNEL_DIR}/aosp-clang/bin:${KERNEL_DIR}/gcc/bin:${KERNEL_DIR}/gcc32/bin:${PATH}"
     fi
     
-    if ![ -e AnyKernel3]; then
-        git clone --depth=1 https://github.com/osm0sis/AnyKernel3.git
+    if ![ -e afloat-kernel]; then
+        git clone --depth=1 https://github.com/beloncode/afloat-kernel.git
     fi
 
 }
@@ -170,11 +170,11 @@ function compile() {
 }
 
 function zipping() {
-    cp $IMAGE AnyKernel3
-    cp $DTBO AnyKernel3
-    cp $DTB AnyKernel3/dtb
+    cp $IMAGE afloat-anykernel3
+    cp $DTBO afloat-anykernel3
+    cp $DTB afloat-anykernel3/dtb
 
-    cd AnyKernel3 || exit 1
+    cd afloat-anykernel3 || exit 1
     
     zip -r9 ${FINAL_ZIP} *
     

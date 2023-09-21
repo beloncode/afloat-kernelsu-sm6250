@@ -2,5 +2,5 @@
 	path = KernelSU
 	url = https://github.com/tiann/KernelSU
 [submodule "AnyKernel3"]
-	path = AnyKernel3
+	path = afloat-anykernel3
 	url = https://github.com/beloncode/AnyKernel3.git
